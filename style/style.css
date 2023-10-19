@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+/*other pages*/
 @import url("/Projet4-OhMyFood/style/sass/pages/restaurant.css");
 @import url("/Projet4-OhMyFood/style/sass/layout/footer.css");
 @import url("/Projet4-OhMyFood/style/sass/layout/menus.css");
+@import url("/Projet4-OhMyFood/style/sass/layout/header.css");
+@import url("/Projet4-OhMyFood/style/sass/layout/fonctionnement.css");
+@import url("/Projet4-OhMyFood/style/sass/layout/city.css");
 
 
-*,
-::before,
-::after {
+*,::before,::after {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-
 main {
   padding: 0 7rem;
 }
@@ -24,159 +24,11 @@ main {
     padding: 0 1rem;
   }
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1,h2,h3,h4,h5,h6,p {
   padding: 0;
   margin: 0;
 }
-
 a {
   text-decoration: none;
   color: inherit;
-}
-
-header {
-  font-family: "Shrikhand", cursive;
-  text-align: center;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
-  padding: 0.3rem;
-  margin: 0;
-  position: relative;
-}
-
-.city {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1%;
-  background-color: #cecece;
-  text-align: center;
-  padding: 0.5%;
-}
-.city i {
-  font-size: 150%;
-}
-.city h2 {
-  font-size: 150%;
-}
-
-.menu {
-  text-align: center;
-  margin: 2%;
-}
-.menu h2 {
-  font-size: 150%;
-  margin: 1%;
-}
-.menu p {
-  font-size: 1rem;
-}
-.menu button {
-  color: white;
-  font-weight: 300;
-  font-size: 1.5rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 2rem;
-  transition: transform 200ms;
-  margin-top: 1rem;
-  cursor: pointer;
-  box-shadow: 2px 1px 8px -3px #7e7e7e;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  font-size: 1rem;
-}
-.menu button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-
-.loader {
-  position: fixed;
-  display: grid;
-  place-items: center;
-  background-color: #ffffff;
-  height: 100vh;
-  inset: 0;
-  z-index: 1;
-  opacity: 0.9;
-  animation: disappear 200ms 3s forwards;
-  transform-origin: top;
-}
-.loader::after {
-  content: "";
-  height: 100px;
-  width: 100px;
-  border-right: 5px solid transparent;
-  border-top: 5px solid #9356dc;
-  border-radius: 50%;
-  animation: spin 1s ease-in-out;
-  animation-iteration-count: 3;
-}
-
-@keyframes disappear {
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-.fonctionnement {
-  counter-reset: steps;
-  margin-bottom: 2rem;
-}
-.fonctionnement ol {
-  display: flex;
-  gap: 2rem;
-}
-@media (max-width: 1000px) {
-  .fonctionnement ol {
-    flex-direction: column;
-  }
-}
-.fonctionnement li {
-  position: relative;
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  background-color: #f6f6f6;
-  padding: 1.5rem 2rem;
-  flex-grow: 1;
-  border-radius: 1rem;
-  box-shadow: 2px 1px 8px -3px #7e7e7e;
-}
-.fonctionnement li::before {
-  content: counter(steps);
-  counter-increment: steps;
-  color: white;
-  background-color: #9356dc;
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: -1rem;
-  transform: translateY(-50%);
-}
-.fonctionnement li:hover {
-  transform: scale(1.02);
-  background-color: #f2eafb;
-}
-.fonctionnement li:hover i::before {
-  color: #9356dc;
-}
-.fonctionnement li i.fas {
-  margin-right: 1rem;
-  color: #7e7e7e;
-  font-size: 1.5rem;
 }

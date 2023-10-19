@@ -1,0 +1,47 @@
+@use "./../utils/colors";
+
+.fonctionnement{
+    counter-reset: steps;
+    margin-bottom: 2rem;
+    &ol {
+        display: flex;
+        gap: 2rem;
+        @media (max-width : 1000px){flex-direction: column;}
+    }
+    &li{
+        position: relative;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        background-color: colors.$lightergrey;
+        padding: 1.5rem 2rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        box-shadow: 2px 1px 8px -3px colors.$lightgrey;
+    }
+    &li::before{
+        content: counter(steps);
+        counter-increment: steps;
+        color: white;
+        background-color: colors.$purple;
+        width: 2rem;
+        height: 2rem;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        transform: translateY(-50%);
+    }
+    &li:hover{
+        transform: scale(1.02);
+        background-color: #f2eafb;
+    }
+    &li:hover i::before{color: colors.$purple;}
+    &li i.fas{
+        margin-right: 1rem;
+        color: $lightgrey;
+        font-size: 1.5rem;
+    }
+}

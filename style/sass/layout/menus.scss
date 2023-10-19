@@ -3,20 +3,19 @@
 @use "../utils/mixins";
 
 #homepage {
-  .menus {
+  .restaurants {
     background-color: #f6f6f6;
     margin-bottom: 2rem;
 
-    .menus__cards {
+    .restaurants__cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
       @media (max-width: variables.$breakpoint) {
         grid-template-columns: repeat(1, 1fr);
       }
-      .new {
-        position: relative;
-      }
+      .new {position: relative;}
+      
       .new::before {
         content: "Nouveau";
         position: absolute;
@@ -38,17 +37,62 @@
         background-size: cover;
         background-position: center;
       }
+      /*for loop for the restaurants images*/
       @for $i from 1 through 4 {
         &__image-#{$i} {
           background-image: url("../assets/menu-#{$i}.jpg");
         }
       }
       &__description {
+        
         @include mixins.heart-animated;
-        h3,
-        p {
-          padding: 0.3rem;
-        }
+
+        h3,p {padding: 0.3rem;}
+      }
+      &__description::before{
+        display: inline-block;
+        position: absolute;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 400;
+        content: "\f004";
+        font-size: 2rem;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: inherit;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+      }
+      &__description:after {
+        display: inline-block;
+        position: absolute;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f004";
+        font-size: 2rem;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+      }
+      &__description:hover::after{
+        opacity: 1;
+        transform: translateY(-50) scale(1.1);
       }
     }
   }
