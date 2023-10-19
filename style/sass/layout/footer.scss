@@ -1,7 +1,12 @@
 @use "./../utils/colors";
 
 footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
   background-color: colors.$darkgrey;
+  gap : 2rem;
   padding: 1rem 2rem;
   color: white;
   h2 {
