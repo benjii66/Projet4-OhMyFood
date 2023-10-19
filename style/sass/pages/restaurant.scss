@@ -45,7 +45,7 @@ body {
   .resto-main {
     padding: 0 1rem;
   }
-  .menus {
+  .restaurants {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
@@ -67,7 +67,7 @@ body {
         background-color: colors.$color-tertiary;
       }
     }
-    .menus__category {
+    .restaurants__category {
       overflow: hidden;
 
       .menu-item {
@@ -96,8 +96,7 @@ body {
         .menu-item__description {
           padding: 1rem;
           overflow: hidden;
-          h4,
-          p {
+          h4,p {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;

@@ -32,7 +32,7 @@
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: $color;
+  color: colors.$color;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: $opacity;
@@ -42,7 +42,8 @@
 @mixin heart-animated {
   position: relative;
   background-color: white;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+
   &::before {
     @include heart;
   }
