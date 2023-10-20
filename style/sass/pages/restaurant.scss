@@ -34,6 +34,8 @@ body {
   .resto__title {
     margin-top: -2rem;
     h2 {
+      display: flex;
+      justify-content: center;
       font-family: "Shrikhand", "cursive";
       padding: 2rem 1rem;
       @include mixins.heart-animated;
@@ -43,14 +45,19 @@ body {
   }
 
   .resto-main {
-    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .restaurants {
-    display: grid;
+   
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+    width: 50rem;
     @media (max-width: variables.$breakpoint) {
       grid-template-columns: 1fr;
+
     }
     h3 {
       text-transform: uppercase;
@@ -58,7 +65,12 @@ body {
       position: relative;
       margin-bottom: 1rem;
       &::after {
+        @media (max-width: variables.$breakpoint) {
+        right: 30%;
+          
+        }
         content: "";
+        right: 40rem;
         position: absolute;
         top: 1.5rem;
         left: 0;
@@ -69,6 +81,7 @@ body {
     }
     .restaurants__category {
       overflow: hidden;
+      margin-bottom: 2rem;
 
       .menu-item {
         $numberOfItems: 3;

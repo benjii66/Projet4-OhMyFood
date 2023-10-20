@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+
 /*other pages*/
 @import url("/Projet4-OhMyFood/style/sass/pages/restaurant.css");
 @import url("/Projet4-OhMyFood/style/sass/layout/footer.css");
@@ -8,28 +9,4 @@
 @import url("/Projet4-OhMyFood/style/sass/layout/header.css");
 @import url("/Projet4-OhMyFood/style/sass/layout/fonctionnement.css");
 @import url("/Projet4-OhMyFood/style/sass/layout/city.css");
-
-
-*,::before,::after {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-main {
-  padding: 0 7rem;
-}
-@media (max-width: 1000px) {
-  main {
-    padding: 0 1rem;
-  }
-}
-h1,h2,h3,h4,h5,h6,p {
-  padding: 0;
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
+@import url("/Projet4-OhMyFood/style/sass/base.css");

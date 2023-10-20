@@ -13,19 +13,4 @@
 @use "../utils/variables";
 
 
-*,::before,::after{box-sizing: border-box;}
 
-body{margin:0; font-family: "Roboto", sans-serif;}
-
-main{
-    padding:0 7rem;
-    @media (max-width:variables.$breakpoint) {padding:0 1rem;}
-}
-h1,h2,h3,h4,h5,h6,p{
-    padding: 0;
-    margin: 0;
-  }
-a {
-    text-decoration: none;
-    color: inherit;
-  }

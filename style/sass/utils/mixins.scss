@@ -29,7 +29,7 @@
   @include font-awesome($font-weight);
   content: "\f004";
   font-size: 2rem;
-  right: 1rem;
+  right: 35rem;
   top: 50%;
   transform: translateY(-50%);
   color: colors.$color;
@@ -37,10 +37,12 @@
   -webkit-background-clip: text;
   opacity: $opacity;
   transition: all 200ms ease-in-out;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 @mixin heart-animated {
-  position: relative;
   background-color: white;
   border-radius: 2rem 2rem 0 0;
 

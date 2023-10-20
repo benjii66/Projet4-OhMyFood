@@ -42,6 +42,8 @@ body {
   margin-top: -2rem;
 }
 #page-resto .resto__title h2 {
+  display: flex;
+  justify-content: center;
   font-family: "Shrikhand", "cursive";
   padding: 2rem 1rem;
   position: relative;
@@ -50,8 +52,13 @@ body {
   border-radius: 2rem 2rem 0 0;
   background-color: #f6f6f6;
 }
+@media (max-width: 1000px) {
+  #page-resto .resto__title h2::before, #page-resto .resto__title h2::after{
+    right: 30%;
+  }
+}
 #page-resto .resto__title h2::before {
-  display: inline-block;
+  display: inline-flex;
   position: absolute;
   font-style: normal;
   font-variant: normal;
@@ -61,7 +68,7 @@ body {
   font-weight: 400;
   content: "\f004";
   font-size: 2rem;
-  right: 1rem;
+  right: 40rem;
   top: 50%;
   transform: translateY(-50%);
   color: inherit;
@@ -72,6 +79,7 @@ body {
 }
 #page-resto .resto__title h2::after {
   display: inline-block;
+  justify-content: center;
   position: absolute;
   font-style: normal;
   font-variant: normal;
@@ -81,7 +89,7 @@ body {
   font-weight: 900;
   content: "\f004";
   font-size: 2rem;
-  right: 1rem;
+  right: 40rem;
   top: 50%;
   transform: translateY(-50%);
   color: transparent;
@@ -96,16 +104,19 @@ body {
   transform: translateY(-50%) scale(1.1);
 }
 #page-resto .restaurant-main {
-  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 
 /*TODO WORK HERE FOR EASIER DISPLAY*/
 
 #page-resto .restaurants {
-  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  width: 50rem;
 }
 @media (max-width: 1000px) {
   #page-resto .restaurants {
@@ -129,6 +140,7 @@ body {
 }
 #page-resto .restaurants .restaurants__category {
   overflow: hidden;
+  margin-bottom: 2rem;
 }
 #page-resto .restaurants .restaurants__category .menu-item {
   display: flex;

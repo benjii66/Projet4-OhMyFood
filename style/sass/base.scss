@@ -1,36 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
+@use "sass/base";
+@use "sass/layout/header";
+@use "sass/layout/city";
+@use "sass/layout/explorer";
+@use "sass/layout/tuto";
+@use "sass/layout/menus";
+@use "sass/layout/footer";
+@use "sass/layout/fonctionnement";
+@use "sass/layout/loader";
+@use "sass/layout/header";
+@use "sass/pages/restaurant";
 
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
+@use "../utils/variables";
 
-main {
-  padding: 0 7rem;
-  @media (max-width: 1000px) {
-    padding: 0 1rem;
+
+*,::before,::after{box-sizing: border-box;}
+
+body{margin:0; font-family: "Roboto", sans-serif;}
+
+main{
+    padding:0 7rem;
+    @media (max-width:variables.$breakpoint) {padding:0 1rem;}
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
   }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  padding: 0;
-  margin: 0;
-}
-
 a {
-  text-decoration: none;
-  color: inherit;
-}
+    text-decoration: none;
+    color: inherit;
+  }
