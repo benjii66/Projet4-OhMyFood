@@ -32,7 +32,6 @@ body {
   }
 
   .resto__title {
-    margin-top: -2rem;
     h2 {
       display: flex;
       justify-content: center;
@@ -49,6 +48,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+
   }
   .restaurants {
    
@@ -57,17 +58,19 @@ body {
     width: 50rem;
     @media (max-width: variables.$breakpoint) {
       grid-template-columns: 1fr;
+      width: 100%;
 
     }
     h3 {
       text-transform: uppercase;
       font-weight: 400;
       position: relative;
+      margin-left : 15%;
       margin-bottom: 1rem;
+
       &::after {
         @media (max-width: variables.$breakpoint) {
-        right: 30%;
-          
+        right: 30%;          
         }
         content: "";
         right: 40rem;
@@ -95,6 +98,8 @@ body {
         border-radius: 1rem;
         overflow: hidden;
         margin: 0.5rem;
+        margin-left: 15%;
+        width : 70%;
         @include mixins.box-shadow;
         animation: appear 1s;
         animation-fill-mode: both;
